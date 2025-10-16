@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Talent Hunters LK — Job Board</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Talent Hunters LK</h1>
+      <p class="tag">Information Technology — Job Board</p>
+    </div>
+    <nav class="nav">
+      <a class="admin-link" href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main class="full-container">
+    <section class="controls">
+      <input id="search" type="text" placeholder="Search title, location, job type or tech..." />
+      <select id="filterType">
+        <option value="">All types</option>
+        <option>Remote</option>
+        <option>Hybrid</option>
+        <option>Onsite</option>
+      </select>
+      <button id="clearBtn" class="btn-ghost">Clear</button>
+    </section>
+
+    <section id="jobs" class="jobs-grid" aria-live="polite"></section>
+
+    <footer class="footer">
+      <small>© Talent Hunters LK — Built for Information Technology roles</small>
+    </footer>
+  </main>
+
+  <script src="assets/scripts.js"></script>
+</body>
+</html>

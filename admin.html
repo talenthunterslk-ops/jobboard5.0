@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin — Talent Hunters LK</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h2>Admin • Talent Hunters LK</h2>
+    </div>
+    <nav class="nav">
+      <a class="home-link" href="index.html">← Home</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="authPanel" class="card auth-card">
+      <h3>Admin sign in</h3>
+      <div class="form-row">
+        <input id="username" placeholder="Username" />
+        <input id="password" type="password" placeholder="Password" />
+        <button id="loginBtn" class="btn-primary">Login</button>
+      </div>
+    </section>
+
+    <section id="adminPanel" class="card admin-panel" style="display:none">
+      <div class="admin-top">
+        <div>
+          <h4>Create / Edit job</h4>
+          <p class="small">Use the editor below. Press Enter to add paragraphs.</p>
+        </div>
+        <div class="signed">Signed in as <strong>Admin9</strong></div>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-left">
+          <label>Job title</label>
+          <input id="jobTitle" />
+
+          <label>Company</label>
+          <input id="jobCompany" />
+
+          <label>Location</label>
+          <input id="jobLocation" placeholder="e.g. Colombo, LK" />
+
+          <label>Tech stack (comma separated)</label>
+          <input id="jobTech" placeholder="Python, AWS, Airflow" />
+
+          <label>Job type</label>
+          <select id="jobType">
+            <option>Remote</option>
+            <option>Hybrid</option>
+            <option>Onsite</option>
+          </select>
+
+          <label>Description</label>
+          <div class="toolbar">
+            <button class="tb" data-cmd="bold">B</button>
+            <button class="tb" data-cmd="italic">I</button>
+            <button class="tb" data-cmd="underline">U</button>
+            <button class="tb" data-cmd="insertUnorderedList">• List</button>
+            <select id="fontSizeSel">
+              <option value="3">Normal</option>
+              <option value="4">Large</option>
+              <option value="2">Small</option>
+            </select>
+          </div>
+          <div id="editor" class="editor" contenteditable="true" aria-label="Job description editor"></div>
+        </div>
+
+        <aside class="form-right">
+          <label>Preview</label>
+          <div id="preview" class="preview"></div>
+
+          <div class="actions">
+            <button id="saveBtn" class="btn-primary">Save job</button>
+            <button id="clearForm" class="btn-ghost">Clear</button>
+          </div>
+
+          <div class="existing">
+            <h5>Existing jobs</h5>
+            <div id="jobsList" class="jobs-list"></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/scripts.js"></script>
+</body>
+</html>
